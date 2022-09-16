@@ -19,7 +19,7 @@ const Navbar = () => {
   const connectHandler = async () => {
     await loadAccount(provider, dispatch);
   };
-
+  
   const networkHandler = async (e) => {
     await window.ethereum.request({
       method: "wallet_switchEthereumChain",
@@ -51,6 +51,7 @@ const Navbar = () => {
             <option value="0x2a">Kovan</option>
           </select>
         )}
+        {chainId && console.log(chainId.toString(16))}
       </div>
 
       <div className="exchange__header--account flex">
