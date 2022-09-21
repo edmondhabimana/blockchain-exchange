@@ -9,7 +9,7 @@ module.exports = {
     localhost: {},
     kovan: {
       url: `http://kovan.infura.io/v3/${process.env.INFURA_API_KEY}`,
-      accounts: privateKeys.split()
+      accounts: privateKeys.split(','),
     }
   },
 };
